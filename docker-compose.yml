@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+ vsftpd:
+  image: panubo/vsftpd
+   environment:
+    - FTP_USER=xxxxxxxxxxxxxxxx
+    - FTP_PASSWORD=xxxxxxxxxxxxxxxxxx
+   volumes:
+    - /home/linuxadmin/projects/dftp/storage:/srv
+   expose:
+    - 21
+   network_mode: host
